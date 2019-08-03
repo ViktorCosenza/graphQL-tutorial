@@ -1,0 +1,32 @@
+{
+  "name": "graphql-tutorial",
+  "version": "1.0.0",
+  "description": "My implementation of this tutorial https://www.howtographql.com/graphql-js/0-introduction/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index.js",
+    "dev": "nodemon --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorCosenza/graphQL-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktorCosenza/graphQL-tutorial/issues"
+  },
+  "homepage": "https://github.com/ViktorCosenza/graphQL-tutorial#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "nodemon": "^1.19.1",
+    "standard": "^13.1.0"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.18.1"
+  }
+}
