@@ -1,5 +1,3 @@
-# import {AuthPayload}
-
 type Query {
   info: String!
   feed: [Link!]!
