@@ -9,11 +9,23 @@ var models = [
     embedded: false
   },
   {
+    name: "Trade",
+    embedded: false
+  },
+  {
+    name: "Skill",
+    embedded: false
+  },
+  {
     name: "User",
     embedded: false
   },
   {
     name: "Vote",
+    embedded: false
+  },
+  {
+    name: "Rating",
     embedded: false
   }
 ];

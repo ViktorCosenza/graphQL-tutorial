@@ -6,16 +6,43 @@ type Link {
   votes: [Vote!]!
 }
 
+type Trade {
+  id: ID! @id
+  user: User!
+  skill: Skill!
+  trade: Trade!
+}
+
+type Skill {
+  id: ID! @id
+  name: String! @unique
+  description: String!
+  appearsIn: [Trade!]!
+  possessedBy: [User!]!
+}
+
 type User {
   id: ID! @id
   name: String!
   email: String! @unique
   password: String!
+  ratings: [Rating!]! @relation(name: "RatingSubject")
+  authorOf: [Rating!]! @relation(name: "RatingAuthor")
   links: [Link!]!
+  skills: [Skill!]!
+  trades: [Trade!]!
 }
 
 type Vote {
   id: ID! @id
   user: User!
   link: Link!
+}
+
+type Rating {
+  id: ID! @id
+  score: Int!
+  author: User! @relation(name: "RatingAuthor")
+  description: String
+  subject: User! @relation(name: "RatingSubject")
 }
